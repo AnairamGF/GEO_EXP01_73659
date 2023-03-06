@@ -9,32 +9,33 @@
 </head>
 <body>
 
-    <form class="form">
+    <form class="form" action="" method="post" id="form">
         <h2 class="form-title">Indica tu ubicación</h2>
         
         <div class="form-container">
             <div class="form-group">
-                <input type="text" id="name" class="form-input" placeholder="">
+                <input type="text" id="name" class="form-input" placeholder="" required>
                 <label for="name" class="form-label">Nombre</label>
                 <spanc class="form-line"></span>
             </div>
     
             <div class="form-group">
-                <input type="text" id="latitude" class="form-input" placeholder="">
+                <input type="number" id="latitude" class="form-input" placeholder="" required>
                 <label for="latitude" class="form-label">Latitud</label>
                 <spanc class="form-line"></span>
             </div>
     
             <div class="form-group">
-                <input type="text" id="longitude" class="form-input" placeholder="">
+                <input type="nu" id="longitude" class="form-input" placeholder="" required>
                 <label for="longitude" class="form-label">Longitud</label>
                 <spanc class="form-line"></span>
             </div>
 
             <input type="submit" class="form-submit" value="Enviar">
+            <p class="warnings" id="warnings"></p>
         </div>
         
     </form>
-
+    <script type="module" src="/javascript/prueba.js"></script>
 </body>
 </html>

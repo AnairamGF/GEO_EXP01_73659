@@ -13,6 +13,14 @@ body{
     min-height: 100vh;
 }
 
+.warnings{
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: rgb(0, 0, 0);
+    padding-top: 20px;
+}
+
 .form{
     background-color: #88da91;
     margin: auto;
