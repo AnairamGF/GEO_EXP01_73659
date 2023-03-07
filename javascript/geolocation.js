@@ -2,15 +2,15 @@ import Feature from 'ol/Feature.js';
 import Map from 'ol/Map.js';
 import Point from 'ol/geom/Point.js';
 import View from 'ol/View.js';
-import {Style, Fill, Circle} from 'ol/style.js';
+import {Circle as CircleStyle, Fill, Stroke, Style} from 'ol/style.js';
 import {OSM, Vector as VectorSource} from 'ol/source.js';
 import {Tile as TileLayer, Vector as VectorLayer} from 'ol/layer.js';
 import { fromLonLat } from 'ol/proj';
 
 const valores = new URLSearchParams(window.location.search);
 const name = valores.get("nombre");
-const lat = valores.get("latitud");
-const lon = valores.get("longitud");
+const latitude = valores.get("latitud");
+const longitude = valores.get("longitud");
 
 const tileLayer = new TileLayer({
     source: new OSM({
@@ -35,7 +35,7 @@ const map = new Map({
   });
 
 const ubi1 = new Style({
-    image: new Circle({
+    image: new CircleStyle({
         radius: 6,
         fill: new Fill({
             color: "blue"
@@ -43,14 +43,15 @@ const ubi1 = new Style({
     })
 });
 
+
 const ubi2 = new Style({
-    image: new Circle({
-        radius: 6,
-        fill: new Fill({
-            color: "red"
-        })
+    image: new CircleStyle({
+      radius: 6,
+      fill: new Fill({
+        color: 'red'
+      })
     })
-});
+  });
 
 getLocation();
 function getLocation() {
@@ -64,17 +65,15 @@ function getLocation() {
         source.addFeature(feature);
       });
     } 
-  }
+}
 
-
-
-console.log(lat)
-console.log(lon)
+console.log(latitude)
+console.log(longitude)
 
 const msg = document.getElementById("nombre");
 msg.textContent = "¡Hola " + name + "!"
   
-findLocation(lon, lat);
+findLocation(longitude, latitude);
 function findLocation(longitude, latitude){
    const x = longitude;
    const y = latitude;

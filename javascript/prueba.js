@@ -24,10 +24,10 @@ form.addEventListener("submit", e=>{
     if(entrar){
         parrafo.innerHTML = warnings
     }
-    if(latitude.value>=21.1324529 && longitude<=-101.6942687 && latitude.value>=21.103789 && longitude<= -101.565351){
-        alert("Lo siento, no puede realizarse su entrega")
-    }else{
+    if(latitude>=21.063037 && latitude <= 21.217722 && longitude >= -101.766096  && longitude <= -101.563747){
         send()
+    }else{
+        alert("Lo siento, no puede realizarse su entrega")
     }
 })
 
@@ -37,5 +37,5 @@ function send(){
     var longitude = document.getElementById("longitude").value;
   
     window.location.href = "geolocation.html?nombre=" + name + "&latitud=" + latitude + "&longitud=" + longitude;
-  }
+}
 
