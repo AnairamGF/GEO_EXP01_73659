@@ -26,3 +26,10 @@ form.addEventListener("submit", e=>{
     }
 })
 
+/*window.addEventListener("load",  ()=>{
+    const params=(new URL(document.location)).searchParams;
+    const name=params.get("name")
+    const longitude=params.get("longitude")
+    const latitude=params.get("latitude")
+})*/
+
