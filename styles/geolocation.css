@@ -3,3 +3,9 @@
     height: 400px;
     margin: auto;    
 }
+.container{
+    font-size: xx-large;
+    color: rgb(0, 0, 0);
+    margin-bottom: 50px;
+    text-align: center;
+}
