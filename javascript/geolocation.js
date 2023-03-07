@@ -71,7 +71,7 @@ console.log(latitude)
 console.log(longitude)
 
 const msg = document.getElementById("nombre");
-msg.textContent = "¡Hola " + name + "!"
+msg.textContent = "¡Hola " + name + "! Tu pedido está en camino"
   
 findLocation(longitude, latitude);
 function findLocation(longitude, latitude){
